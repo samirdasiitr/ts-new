@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option go_package = "github.com/ts-new/proto/model";
+
+package model;
+
+// User service.
+service UserService {
+    // Register a new user.
+    rpc Register(User) returns (User) {}
+    
+    // Update password of an existing user.
+    rpc ChangePassword(User) returns (User) {}
+
+    // Update address/name/etc of an exiting user.
+    rpc UserInfoUpdate(User) returns (User) {}
+
+    // Delete user.
+    rpc UserDelete(User) returns (User) {}
+
+    // Read user details.
+    rpc GetUser(User) returns (User) {}
+}
+
+message UUID {
+  bytes value = 1;
+}
+
+// Represents user
+message User {
+    string name = 1;
+    string lastName = 2;
+    string address1 = 3;
+    string address2 = 4;
+    string cityName = 5;
+    string state = 6;
+    string email = 7;
+    string mobileNumber = 8;
+    int64 cityIndex = 9;
+	UUID   uuid = 10;
+    string password = 11;
+}
