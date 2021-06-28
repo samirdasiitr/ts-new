@@ -28,15 +28,26 @@ message UUID {
 
 // Represents user
 message User {
+    // User Name
     string name = 1;
+    // User's Lastname
     string lastName = 2;
+    // 1st Address string
     string address1 = 3;
+    // 2nd address string
     string address2 = 4;
+    // City Name
     string cityName = 5;
+    // State
     string state = 6;
+    // Email address
     string email = 7;
+    // Mobile Number
     string mobileNumber = 8;
+    // City Index in Global City Index list.
     int64 cityIndex = 9;
-	UUID   uuid = 10;
+    // ID
+    UUID   uuid = 10;
+    // Password
     string password = 11;
 }
