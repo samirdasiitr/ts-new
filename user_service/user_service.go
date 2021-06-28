@@ -9,7 +9,7 @@ import (
 // User Store Service
 type UserStoreService interface {
     // Create a new user.
-	Create(context.Context, *pb.User) (*pb.User, error)
+    Create(context.Context, *pb.User) (*pb.User, error)
     // Update an existing user.
     Update(context.Context, *pb.User, *pb.User) (*pb.User, error)
     // Delete an existing user.
